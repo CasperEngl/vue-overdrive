@@ -1,5 +1,5 @@
 {
-  "name": "vue-overdrive",
+  "name": "@casperengl/vue-overdrive",
   "version": "1.2.0",
   "description": "Super easy magic-move transitions for Vue apps, powered by Ramjet",
   "main": "dist/overdrive.umd.js",
