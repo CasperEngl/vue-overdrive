@@ -8,6 +8,9 @@
   "repository": "https://github.com/mattrothenberg/vue-overdrive",
   "author": "Matt Rothenberg",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "test": "echo 'What tests?'"
