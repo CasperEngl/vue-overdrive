@@ -9,7 +9,8 @@
   "author": "Matt Rothenberg",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "test": "echo 'What tests?'"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
