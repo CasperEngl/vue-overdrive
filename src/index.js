@@ -1,9 +1,9 @@
-import Overdrive from "./Overdrive.vue";
+import Overdrive from './Overdrive.vue';
 
 export function install(Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component("overdrive", Overdrive);
+  Vue.component('overdrive', Overdrive);
 }
 
 export const VOverdrive = Overdrive;
@@ -22,9 +22,9 @@ const plugin = {
 
 // Auto-install
 let GlobalVue = null;
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   GlobalVue = window.Vue;
-} else if (typeof global !== "undefined") {
+} else if (typeof global !== 'undefined') {
   GlobalVue = global.Vue;
 }
 if (GlobalVue) {

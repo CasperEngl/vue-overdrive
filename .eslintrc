@@ -1,8 +1,13 @@
 {
-  "plugins": ["prettier"],
-  "extends": ["plugin:vue/recommended", "plugin:prettier/recommended"],
+  "plugins": [],
+  "extends": [
+    "plugin:vue/recommended"
+  ],
   "rules": {
     "vue/no-unused-vars": 1,
-    "prettier/prettier": "error"
+    "quotes": [
+      2,
+      "single"
+    ]
   }
 }

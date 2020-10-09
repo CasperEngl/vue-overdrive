@@ -1,4 +1,6 @@
 <script>
+/* eslint-disable quotes */
+import { h } from "vue-demi";
 import ramjet from "ramjet";
 const components = {};
 let matchedEl = null;
@@ -32,7 +34,7 @@ export default {
     },
     duration: {
       type: Number,
-      duration: 400
+      default: () => 400
     },
     easing: {
       type: Function,
@@ -44,6 +46,19 @@ export default {
       animating: false,
       transformer: {}
     };
+  },
+  mounted() {
+    const match = components[this.id];
+    if (match) {
+      this.handleMatch();
+    } else {
+      this.cache();
+    }
+  },
+  beforeUnmount() {
+    if (this.animating) {
+      this.transformer.teardown();
+    }
   },
   methods: {
     cache() {
@@ -65,7 +80,7 @@ export default {
       });
     },
     animate(cb = () => {}) {
-      const a = document.querySelector(`[data-clone="${this.id}"]`);
+      const a = document.querySelector(`[data-clone='${this.id}']`);
       const b = this.$el.firstChild;
       this.animating = true;
       this.transformer = ramjet.transform(a, b, {
@@ -88,26 +103,13 @@ export default {
       };
       this.$nextTick(() => {
         this.animate(cb);
-        const clone = document.querySelector(`[data-clone="${this.id}"]`);
+        const clone = document.querySelector(`[data-clone='${this.id}']`);
         document.body.removeChild(clone);
         this.cache();
       });
     }
   },
-  mounted() {
-    const match = components[this.id];
-    if (match) {
-      this.handleMatch();
-    } else {
-      this.cache();
-    }
-  },
-  beforeDestroy() {
-    if (this.animating) {
-      this.transformer.teardown();
-    }
-  },
-  render(h) {
+  render() {
     return h(this.tag, [this.$slots.default]);
   }
 };

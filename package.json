@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@vue/compiler-sfc": "^3.0.0",
     "@vue/component-compiler-utils": "^2.3.1",
     "babel-preset-latest": "^6.24.1",
     "eslint": "^5.11.0",
@@ -21,14 +22,14 @@
     "eslint-plugin-vue": "^5.0.0",
     "prettier": "^1.15.3",
     "rollup": "^1.6.0",
-    "rollup-plugin-commonjs": "^9.2.1",
-    "rollup-plugin-node-resolve": "^4.0.1",
-    "rollup-plugin-vue": "^4.7.2",
-    "vue": "^2.5.21",
-    "vue-hot-reload-api": "^2.3.1",
-    "vue-template-compiler": "^2.5.21"
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-vue": "^6.0.0-beta.8",
+    "vue": "^3.0.0",
+    "vue-hot-reload-api": "^2.3.1"
   },
   "dependencies": {
-    "ramjet": "^0.6.0-alpha"
+    "ramjet": "^0.6.0-alpha1",
+    "vue-demi": "^0.4.0"
   }
 }
