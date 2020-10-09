@@ -26,7 +26,7 @@ export default {
   props: {
     tag: {
       type: String,
-      default: "div"
+      default: () => "div"
     },
     id: {
       type: String,
@@ -38,7 +38,7 @@ export default {
     },
     easing: {
       type: Function,
-      default: ramjet.linear
+      default: () => ramjet.linear
     }
   },
   data() {

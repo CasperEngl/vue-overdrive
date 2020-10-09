@@ -3222,7 +3222,7 @@ var script = {
   props: {
     tag: {
       type: String,
-      default: "div"
+      default: () => "div"
     },
     id: {
       type: String,
@@ -3234,7 +3234,7 @@ var script = {
     },
     easing: {
       type: Function,
-      default: ramjet_umd.linear
+      default: () => ramjet_umd.linear
     }
   },
   data() {
